@@ -1,0 +1,37 @@
+<h1>Listing resturants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Resturant type</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Custom fields</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resturants.each do |resturant| %>
+      <tr>
+        <td><%= resturant.name %></td>
+        <td><%= resturant.resturant_type %></td>
+        <td><%= resturant.address %></td>
+        <td><%= resturant.description %></td>
+        <td><%= resturant.email %></td>
+        <td><%= resturant.phone %></td>
+        <td><%= resturant.custom_fields %></td>
+        <td><%= link_to 'Show', resturant %></td>
+        <td><%= link_to 'Edit', edit_resturant_path(resturant) %></td>
+        <td><%= link_to 'Destroy', resturant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resturant', new_resturant_path %>

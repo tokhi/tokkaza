@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  event_date: 2014-05-11 19:08:05
+  custom_fields: MyString
+
+two:
+  name: MyString
+  event_date: 2014-05-11 19:08:05
+  custom_fields: MyString
